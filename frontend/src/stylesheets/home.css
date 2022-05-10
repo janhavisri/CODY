@@ -1,0 +1,23 @@
+.nav_bg {
+    /* margin-top: 100px; */
+    background-color: bisque;
+    padding-bottom: 100px;
+}
+
+.tag {
+    margin-top: 130px;
+}
+
+.img-fluid {
+    margin-top: 130px;
+    margin-left: 80px;
+    border-radius: 20px;
+}
+
+.bttn {
+    background-color: rgb(80, 221, 221);
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 17px;
+    cursor: pointer;
+}

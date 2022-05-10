@@ -1,7 +1,11 @@
-import React from "react";
-
+import { Outlet } from "react-router-dom";
+// import Home from "./home";
+// import Login from "./login";
 const Main = () => {
-  return <div>Main</div>;
+  return (
+    <>
+      <Outlet />
+    </>
+  );
 };
-
 export default Main;

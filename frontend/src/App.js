@@ -1,25 +1,50 @@
-import logo from "./logo.svg";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "./components/main/login";
 import Admin from "./components/admin";
-import User from "./components/user";
-import Main from "./components/main";
+//import Signin from "./components/admin/signin";
 import Dashboard from "./components/admin/dashboard";
-import Profile from "./components/admin/profile";
+import Main from "./components/main";
+import Signup from "./components/main/signup";
+import Login from "./components/main/login";
+import Header from "./components/main/header";
+import UserDashboard from "./components/main/userdashboard";
+import Home from "./components/main/home";
+import User from "./components/user";
+import { Provider } from "./Context";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<Admin />} path="admin">
-          <Route element={<Dashboard />} path="dashboard" />
-          <Route element={<Profile />} path="profile" />
-        </Route>
-        <Route element={<User />} path="user"></Route>
-        <Route element={<Main />} path="main"></Route>
-      </Routes>
-    </BrowserRouter>
+    <div>
+     
+      <BrowserRouter>   
+      <Provider>       
+      <Header></Header>
+        <Routes>
+      
+
+          <Route element={<Admin />} path="admin">
+            <Route element={<Dashboard />} path="dashboard" />
+            {/* <Route element={<Signin />} path="signin" /> */}
+
+          </Route>
+          
+          <Route element={<Main />} path="main">
+            <Route element={<Signup />} path="signup" />
+            <Route element={<Login />} path="login" />
+            <Route element={<Header />} path="header" />
+            <Route element={<Home />} path="home" />
+            <Route element={<UserDashboard />} path="userdashboard" />
+
+            
+
+          </Route>
+          <Route element={<User />} path="user">
+          </Route>
+        </Routes>
+        </Provider> 
+      </BrowserRouter>
+     
+    </div>
   );
 }
 

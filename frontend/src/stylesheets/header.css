@@ -1,0 +1,46 @@
+.navbar {
+    background-color: peru;
+    box-shadow: 0 25px 25px -25px rgb(0 0 0 / 40%), 0 0 15px rgba(8, 8, 8, 0.06);
+}
+
+.container-fluid .nav-link {
+    font-size: 20px;
+    margin-left: 100px;
+}
+
+.navbar-brand {
+    margin-left: 30px;
+}
+
+.nav-items {
+    margin-left: 720px
+}
+
+.css-1d9t0rk-MuiButtonBase-root-MuiButton-root {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    min-width: 13%;
+    margin-left: 80%;
+    padding: 15px 16px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #6e4d37;
+    box-shadow: 0 20px 20px -20px rgb(0 0 0 / 30%), 0 0 15px rgba(8, 8, 8, 0.06);
+}
