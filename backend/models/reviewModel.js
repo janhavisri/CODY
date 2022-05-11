@@ -6,7 +6,7 @@ const schema = new Schema({
     email: String,
     heroimage: String,
     url: String,
-    phoneno: String,
+    contact: String,
     experience: String,
 })
 
