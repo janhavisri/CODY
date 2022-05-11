@@ -1,5 +1,5 @@
 import "../../stylesheets/signup.css";
- import "../../stylesheets/addplatfrom.css";
+ import "../../stylesheets/addplatform.css";
  import * as React from 'react';
  //import Avatar from '@mui/material/Avatar';
  import Button from '@mui/material/Button';
@@ -10,7 +10,7 @@ import "../../stylesheets/signup.css";
  import Swal from "sweetalert2";
  import app_config from "../../config";
  import { useState } from "react";
-    function AddPlatform({ setOpenAddReview }) {
+    function AddPlatform({ setOpenAddPlatform }) {
         const url = app_config.api_url;
         const [hero, setHero] = useState("");
         const [PlatformFile, setPlatformFile] = useState("");
@@ -22,14 +22,14 @@ import "../../stylesheets/signup.css";
      plans:"",
      offers: "",
      category: "",
-     image: "",
+     heroimage: "",
      links: "",
      
 
    };
    const formSubmit = (values) => {
     console.log(values);
-    values.image = hero;
+    values.heroimage = hero;
     values.file = PlatformFile;
 
     const reqOp = {
@@ -52,7 +52,7 @@ import "../../stylesheets/signup.css";
       });
   };
 
-  const uploadimage = (event) => {
+  const uploadheroimage = (event) => {
     const formdata = new FormData();
     formdata.append("file", event.target.files[0]);
 
@@ -89,8 +89,14 @@ import "../../stylesheets/signup.css";
    return (
      
          <div>
-         <div class="login">
-	{/* <h1>Login</h1> */}
+
+ <div class="container">
+   <div id="signup">
+      <div class="signup-screen">
+         <div class="space-bot text-center">
+           <div class="divider"></div>
+         </div>
+
    <Formik initialValues={platformform} onSubmit={formSubmit}>
                  {({ values, handleChange, handleSubmit }) => (
                    <form onSubmit={handleSubmit}>
@@ -149,19 +155,12 @@ import "../../stylesheets/signup.css";
                 
                 <input
               
-                  onChange={uploadimage}
+                  onChange={uploadheroimage}
                   type="file"
                   className="form-control mt-4 mx-0"
-                  title="Select image"
+                  title="Select heroimage"
                 required/>
-                <TextField
-                  className="w-100 mt-4 bg-white"
-                  label="Url"
-                  variant="filled"
-                  id="url"
-                  onChange={handleChange}
-                  value={values.url}
-               ></TextField>
+
 
                                 <TextField
                   className="w-100 mt-4 bg-white"
@@ -193,6 +192,9 @@ import "../../stylesheets/signup.css";
         
        </div>
        </div>
+       </div>
+       </div>
+       
  );
  }
- export default AddReview;
+ export default AddPlatform;

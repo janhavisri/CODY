@@ -7,7 +7,7 @@ const schema = new Schema({
     plans: String,
     offers: String,
     category: String,
-    image: String,
+    heroimage: String,
     link: String,
 })
 
