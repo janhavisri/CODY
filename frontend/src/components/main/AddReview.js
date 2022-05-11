@@ -1,13 +1,13 @@
-import "../stylesheets/signup.css";
- import "../stylesheets/addcourse.css";
+import "../../stylesheets/signup.css";
+ import "../../stylesheets/addreview.css";
  import * as React from 'react';
  //import Avatar from '@mui/material/Avatar';
  import Button from '@mui/material/Button';
  import TextField from '@mui/material/TextField';
  //import Link from '@mui/material/Link';
  import Grid from '@mui/material/Grid';
- import Box from '@mui/material/Box';
- import Paper from '@mui/material/Paper';
+ //import Box from '@mui/material/Box';
+ //import Paper from '@mui/material/Paper';
  import { Formik } from "formik";
  import Swal from "sweetalert2";
  import app_config from "../../config";
@@ -15,13 +15,14 @@ import "../stylesheets/signup.css";
     function AddReview({ setOpenAddReview }) {
         const url = app_config.api_url;
         const [hero, setHero] = useState("");
-        const [courseFile, setCourseFile] = useState("");
+        const [ReviewFile, setReviewFile] = useState("");
    
  
-   const courseform = {
+   const reviewform = {
      fullname: "",
      email: "",
-     websiteurl: "",
+     heroimage:"",
+     url: "",
      phoneno: "",
      experience: "",
      
@@ -29,8 +30,8 @@ import "../stylesheets/signup.css";
    };
    const formSubmit = (values) => {
     console.log(values);
-    // values.heroimage = hero;
-    // values.file = courseFile;
+    values.heroimage = hero;
+    values.file = ReviewFile;
 
     const reqOp = {
       method: "POST",
@@ -82,60 +83,43 @@ import "../stylesheets/signup.css";
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setCourseFile(event.target.files[0].name);
+        setReviewFile(event.target.files[0].name);
       });
   };
 
    return (
      
          <div>
-         <Box
-       sx={{
-         display: 'flex',
-         flexWrap: 'wrap',
-         mx:'320px',
-         '& > :not(style)': {
-        //    m: 20,
-           width: 1000,
-           height: 680,
-         },
-       }}
-     >
-   <Paper elevation={0} >
-   <Formik initialValues={courseform} onSubmit={formSubmit}>
+         <div class="login">
+	{/* <h1>Login</h1> */}
+   <Formik initialValues={reviewform} onSubmit={formSubmit}>
                  {({ values, handleChange, handleSubmit }) => (
                    <form onSubmit={handleSubmit}>
            {/* <Avatar sx={{ m: 5,mx:40, bgcolor: 'secondary.main' }}> */}
              {/* <LockOutlinedIcon /> */}
            {/* </Avatar> */}
-           <h1 className="add"> Add Courses</h1>
+           <h1 className="add"> Add Review</h1>
            <TextField
-                  className="w-100 mt-4"
-                  label="Title"
+                  className="w-100 mt-4 bg-white"
+                  label="Full Name"
                   variant="filled"
-                  id="title"
+                  id="fullname"
                   onChange={handleChange}
-                  value={values.title}
+                  value={values.fullname}
                 required></TextField>
                 <TextField
                   multiline
                   rows={5}
-                  className="w-100 mt-4"
-                  label="Description"
+                  
+                  className="w-100 mt-4 bg-white"
+                  label="Email"
                   variant="filled"
-                  id="description"
+                  id="email"
                   onChange={handleChange}
-                  value={values.description}
+                  value={values.email}
                 required></TextField>
                
-                <TextField
-                  className="w-100 mt-4"
-                  label="Thumbnail"
-                  variant="filled"
-                  id="thumbnail"
-                  onChange={handleChange}
-                  value={values.thumbnail}
-               ></TextField>
+                
                 <input
               
                   onChange={uploadheroimage}
@@ -144,20 +128,28 @@ import "../stylesheets/signup.css";
                   title="Select heroimage"
                 required/>
                 <TextField
-                  className="w-100 mt-4"
-                  label="Created"
+                  className="w-100 mt-4 bg-white"
+                  label="Url"
                   variant="filled"
-                  id="created"
+                  id="url"
                   onChange={handleChange}
-                  value={values.created}
+                  value={values.url}
                ></TextField>
                 <TextField
-                  className="w-100 mt-4"
-                  label="Value Addition"
+                  className="w-100 mt-4 bg-white"
+                  label="Phone Number"
                   variant="filled"
-                  id="valueaddition"
+                  id="phoneno"
                   onChange={handleChange}
-                  value={values.valueAddition}
+                  value={values.phoneno}
+                ></TextField>
+                                <TextField
+                  className="w-100 mt-4 bg-white"
+                  label="Experience"
+                  variant="filled"
+                  id="experience"
+                  onChange={handleChange}
+                  value={values.experience}
                 ></TextField>
                 
              <Button
@@ -179,8 +171,8 @@ import "../stylesheets/signup.css";
              </form>
                  )}
                  </Formik>
-             </Paper>
-           </Box>
+             {/* </Paper> */}
+           {/* </Box> */}
  {/* 
            <button  href="" className="openModalbtn" onClick={()=>{
              setModalOpen(true);
@@ -188,9 +180,7 @@ import "../stylesheets/signup.css";
          {modalOpen && <Model setOpenModal={setModalOpen}/>} */}
         
        </div>
-      
-     
- 
+       </div>
  );
  }
- export default AddCourse;
+ export default AddReview;

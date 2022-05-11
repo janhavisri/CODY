@@ -9,6 +9,7 @@ import Login from "./components/main/login";
 import Header from "./components/main/header";
 import UserDashboard from "./components/main/userdashboard";
 import Home from "./components/main/home";
+import AddReview from "./components/main/addreview";
 import User from "./components/user";
 import { Provider } from "./Context";
 
@@ -33,6 +34,7 @@ function App() {
             <Route element={<Login />} path="login" />
             <Route element={<Header />} path="header" />
             <Route element={<Home />} path="home" />
+            <Route element={<AddReview />} path="addreview" />
             <Route element={<UserDashboard />} path="userdashboard" />
 
             
