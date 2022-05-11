@@ -6,8 +6,6 @@ import "../../stylesheets/signup.css";
  import TextField from '@mui/material/TextField';
  //import Link from '@mui/material/Link';
  import Grid from '@mui/material/Grid';
- //import Box from '@mui/material/Box';
- //import Paper from '@mui/material/Paper';
  import { Formik } from "formik";
  import Swal from "sweetalert2";
  import app_config from "../../config";
@@ -23,7 +21,7 @@ import "../../stylesheets/signup.css";
      email: "",
      heroimage:"",
      url: "",
-     phoneno: "",
+     contact: "",
      experience: "",
      
 
@@ -108,8 +106,7 @@ import "../../stylesheets/signup.css";
                   value={values.fullname}
                 required></TextField>
                 <TextField
-                  multiline
-                  rows={5}
+                  
                   
                   className="w-100 mt-4 bg-white"
                   label="Email"
@@ -137,11 +134,11 @@ import "../../stylesheets/signup.css";
                ></TextField>
                 <TextField
                   className="w-100 mt-4 bg-white"
-                  label="Phone Number"
+                  label="Contact"
                   variant="filled"
-                  id="phoneno"
+                  id="contact"
                   onChange={handleChange}
-                  value={values.phoneno}
+                  value={values.contact}
                 ></TextField>
                                 <TextField
                   className="w-100 mt-4 bg-white"
@@ -163,21 +160,13 @@ import "../../stylesheets/signup.css";
              </Button>
              <Grid container justifyContent="flex-end">
                <Grid item mx={27}>
-                 {/* <Link href="#" variant="body2">
-                   Already have an account? Sign in
-                 </Link> */}
+                 
                </Grid>
              </Grid>
              </form>
                  )}
                  </Formik>
-             {/* </Paper> */}
-           {/* </Box> */}
- {/* 
-           <button  href="" className="openModalbtn" onClick={()=>{
-             setModalOpen(true);
-         }}>Login</button>
-         {modalOpen && <Model setOpenModal={setModalOpen}/>} */}
+
         
        </div>
        </div>
