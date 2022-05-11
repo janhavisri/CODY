@@ -4,6 +4,8 @@ import Admin from "./components/admin";
 //import Signin from "./components/admin/signin";
 import Dashboard from "./components/admin/dashboard";
 import AddPlatform from "./components/admin/addplatform";
+import ManagePlatform from "./components/admin/manageplatform";
+import ManageUser from "./components/admin/manageuser";
 import Main from "./components/main";
 import Signup from "./components/main/signup";
 import Login from "./components/main/login";
@@ -28,6 +30,8 @@ function App() {
           <Route element={<Admin />} path="admin">
             <Route element={<Dashboard />} path="dashboard" />
             <Route element={<AddPlatform />} path="addplatform" />
+            <Route element={<ManagePlatform />} path="manageplatform" />
+            <Route element={<ManageUser />} path="manageuser" />
             {/* <Route element={<Signin />} path="signin" /> */}
 
           </Route>

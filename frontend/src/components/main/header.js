@@ -75,7 +75,7 @@ const Header = (props) => {
                       <NavLink
                         activeClassName="active"
                         className="nav-link"
-                        to="main/list"
+                        to="main/browseplatform"
                       >
                         Browse Platform
                       </NavLink>

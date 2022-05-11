@@ -39,7 +39,7 @@ const BrowseSlides = () => {
           offers,
           category,
           heroimage,
-          link,
+          links,
           _id,
         }) => (
           <div key={_id} class="col-md-12 col-lg-4 mb-4 mb-lg-0">
@@ -76,6 +76,9 @@ const BrowseSlides = () => {
                   </div>
                   <div class="d-flex justify-content-between mb-3">
                   <h5 class="mb-0">{offers}</h5>
+                  </div>
+                  <div class="d-flex justify-content-between mb-3">
+                  <h5 class="mb-0">{links}</h5>
                   </div>
 
                 <div class="d-flex justify-content-between mb-2">
