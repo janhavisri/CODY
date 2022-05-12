@@ -1,6 +1,7 @@
 import "../../stylesheets/home.css";
 //import Box from '@mui/material/Box';
 //import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
 import web from "../../images/compare.png";
 //import { NavLink } from "react-router-dom";
 import React, { useState } from "react";
@@ -25,7 +26,8 @@ const Home = () => {
                   <h2 class="my-3">
                   We take this seriously with web developers, and we perform in-depth tests on every product we test. We do unbiased, fun and concise reviews so that our audience learns, builds and enjoys the results.{" "}
                   </h2>
-                  <button class=" bttn" ><a href="/main/signup"> Get Started </a></button>
+                  <a href="/main/signup">
+                  <Button variant="contained">Get Started</Button></a>
                   <div class="mt-3">
                     {/* <NavLink
                       to="/main/signup"

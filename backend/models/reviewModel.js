@@ -2,12 +2,10 @@ const mongoose = require('../connection');
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
-    fullname: String,
-    email: String,
-    heroimage: String,
+    websitename: String,
     url: String,
-    contact: String,
-    experience: String,
+    heroimage: String,
+    description: String,
 })
 
 const model = mongoose.model('review', schema);

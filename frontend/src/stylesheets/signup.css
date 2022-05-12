@@ -155,12 +155,16 @@ img {
 .main-agileinfo {
     width: 35%;
     margin: 3em auto;
-    background: rgba(48, 192, 113, 0.18);
+    background: rgba(255, 255, 255, 0.822);
     background-size: cover;
 }
 
 .agileits-top {
     padding: 3em;
+}
+
+.link {
+    margin-left: -40px
 }
 
 
@@ -186,7 +190,7 @@ img {
     display: block;
     width: 40px;
     height: 40px;
-    background-color: rgba(168, 109, 109, 0.15);
+    background-color: rgba(241, 236, 236, 0.849);
     bottom: -160px;
     -webkit-animation: square 20s infinite;
     -moz-animation: square 250s infinite;

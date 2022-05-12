@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Signup from "../../components/main/signup";
 import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
+import Button from '@mui/material/Button';
 import { Context } from "../../Context";
 
 const Header = (props) => {
@@ -13,7 +14,7 @@ const Header = (props) => {
   
     const logout = () => {
       sessionStorage.removeItem("user");
-      window.location.replace("/login");
+      window.location.replace("./login");
     };
   
     const showLoggedIn = () => {
@@ -21,7 +22,7 @@ const Header = (props) => {
         return (
           <>
             <li className="nav-item">
-              <Link className="nav-link" to="main/userdashboard">
+              <Link className="nav-link" to="./userdashboard">
                 UserDashboard
               </Link>
             </li>
@@ -38,12 +39,12 @@ const Header = (props) => {
         return (
             <>
               <li className="nav-item">
-                <NavLink className="nav-link" to="main/login" activeClassName="active">
+                <NavLink className="nav-link" to="./login" activeClassName="active">
                   Login
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="main/signup" activeClassName="active">
+                <NavLink className="nav-link" to="./signup" activeClassName="active">
                   Signup
                 </NavLink>
               </li>
@@ -53,7 +54,7 @@ const Header = (props) => {
       };
     return (
     
-            <nav className="navbar navbar-expand-lg ">
+            <nav className="navbar navbar-expand-lg bg-light">
               <div className="container-fluid nav-link">
                 <Link className="navbar-brand" to="/main/home">
                   Cody
@@ -75,19 +76,21 @@ const Header = (props) => {
                       <NavLink
                         activeClassName="active"
                         className="nav-link"
-                        to="main/browseplatform"
+                        to="./browseplatform"
                       >
                         Browse Platform
                       </NavLink>
                     </li>
-                    
+                   
                      
                     {showLoggedIn()}
                     {/* <a class="css-1d9t0rk-MuiButtonBase-root-MuiButton-root" href="/main/signup">Get Started</a> */}
                   </ul>
+                 
                 </div>
               </div>
             </nav>
+            
           )
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -132,7 +135,8 @@ const Header = (props) => {
                       Signup
                     </NavLink>
                     {signupOpen && <Signup setOpenSignup={setSignupOpen} />}
-
+                    <a href="/main/signup">
+                  <Button variant="contained">Get Started</Button></a>
                   </ul>
                 </div>
               </div>

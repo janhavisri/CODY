@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import app_config from "../../config";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import EditIcon from '@mui/icons-material/Edit';
-//import Update from "./update";
+import "../../stylesheets/browseplatform.css";
+import Update from "./update";
 
 const ManagePlatform = () => {
   const url = app_config.api_url;
@@ -43,7 +44,7 @@ const ManagePlatform = () => {
   const displayUpdateForm = () => {
     if (showForm) {
       return 
-    //   <Update formdata={formData}></Update>;
+     <Update formdata={formData}></Update>;
     }
   };
 
@@ -78,7 +79,7 @@ const ManagePlatform = () => {
       <h1 className="text-center">Manage Your Platform</h1>
       <hr />
 
-      <table className="table table-light ">
+      <table className="table table-light  ">
         <thead>
           <tr>
             <th>Title</th>

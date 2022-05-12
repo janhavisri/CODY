@@ -9,16 +9,16 @@ import Swal from "sweetalert2";
 import { useState } from "react";
 //import "../stylesheets/createport.css";
 
-const Update = (props) => {
+const UpdateUsers = (props) => {
   // function CreatePort({ setOpenCreatePort }) {
   const url = app_config.api_url;
   const [hero, setHero] = useState("");
-  const [platformFile, setPlatformFile] = useState("");
+  const [usersFile, setUsersFile] = useState("");
 
   const formSubmit = (values) => {
     console.log(values);
     values.heroimage = hero;
-    values.file = platformFile;
+    values.file = usersFile;
 
     const reqOp = {
       method: "PUT",
@@ -26,7 +26,7 @@ const Update = (props) => {
       body: JSON.stringify(values),
     };
 
-    fetch(url + "platform/update/" + props.formdata._id, reqOp)
+    fetch(url + "users/update/" + props.formdata._id, reqOp)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -34,7 +34,7 @@ const Update = (props) => {
         if (data.message == "success") {
           Swal.fire({
             icon: "success",
-            title: " Updated Successfully!!",
+            firstname: " Updated Successfully!!",
           });
         }
       });
@@ -70,7 +70,7 @@ const Update = (props) => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setPlatformFile(event.target.files[0].name);
+        setUsersFile(event.target.files[0].name);
       });
   };
 
@@ -90,21 +90,21 @@ const Update = (props) => {
               <form onSubmit={handleSubmit}>
                 <TextField
                   className="w-100 mt-4"
-                  label="Title"
+                  label="First Name"
                   variant="filled"
-                  id="title"
+                  id="firstname"
                   onChange={handleChange}
-                  value={values.title}
+                  value={values.firstname}
                 ></TextField>
                 <TextField
                   multiline
                   rows={5}
                   className="w-100 mt-4"
-                  label="Description"
+                  label="Last Name"
                   variant="filled"
-                  id="description"
+                  id="lastname"
                   onChange={handleChange}
-                  value={values.description}
+                  value={values.lastname}
                 ></TextField>
                 {/* <FormControl className="w-100 mt-4" variant="filled">
                                            <InputLabel id="demo-simple-select-label">Category</InputLabel>
@@ -122,52 +122,26 @@ const Update = (props) => {
                                         </FormControl> */}
  <TextField
                   className="w-100 mt-4"
-                  label="Plans"
+                  label="Email"
                   variant="filled"
-                  id="plans
+                  id="email
                   "
                   onChange={handleChange}
-                  value={values.plans
+                  value={values.email
                   }
                 ></TextField> <TextField
                 className="w-100 mt-4"
-                label="Offers"
+                label="Password"
                 variant="filled"
-                id="offers
+                id="password
                 "
                 onChange={handleChange}
-                value={values.offers
+                value={values.password
                 }
               ></TextField>
-               <TextField
-                  className="w-100 mt-4"
-                  label="Category"
-                  variant="filled"
-                  id="category
-                  "
-                  onChange={handleChange}
-                  value={values.category}
-                  ></TextField>
-                  
-                <input
-                  onChange={uploadheroimage}
-                  type="file"
-                  className="form-control mt-4"
-                  title="Select heroimage"
-                />
-                <TextField
-                  className="w-100 mt-4"
-                  label="Links"
-                  variant="filled"
-                  id="links
-                  "
-                  onChange={handleChange}
-                  value={values.links
-                  }
-                ></TextField>
 
 
-                {/* <input onChange={uploadVideo} type="file" className="form-control mt-4" title="Select Video File" /> */}
+                {/* <input onChange={uploadVideo} type="file" className="form-control mt-4" firstname="Select Video File" /> */}
 
                 <Button
                   className="mt-5"
@@ -186,4 +160,4 @@ const Update = (props) => {
   );
 };
 
-export default Update;
+export default UpdateUsers;

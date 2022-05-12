@@ -1,14 +1,14 @@
 import "../../stylesheets/signup.css";
 import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
+//import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
+//import Box from '@mui/material/Box';
+//import Paper from '@mui/material/Paper';
 import { Formik } from "formik";
 import Swal from "sweetalert2";
 import app_config from "../../config";
@@ -78,7 +78,7 @@ function Signup({ setOpenSignup}){
                 />
               </Grid>
               
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} sm={6} >
                 <TextField
                   required
                   fullWidth
@@ -122,6 +122,7 @@ function Signup({ setOpenSignup}){
                 />
               </Grid>
             </Grid>
+
             <Button
               type="submit"
               fullWidth
@@ -132,7 +133,7 @@ function Signup({ setOpenSignup}){
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item mx={13}>
-                <Link href="/main/login" variant="body2">
+                <Link href="/main/login" variant="body2 "class="link">
                   Already have an account? Sign in
                 </Link>
               </Grid>

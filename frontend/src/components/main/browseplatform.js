@@ -3,7 +3,7 @@ import { InputAdornment, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import app_config from "../../config";
-
+import "../../stylesheets/browseplatform.css";
 const BrowseSlides = () => {
   const [datalist, setDatalist] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -43,10 +43,10 @@ const BrowseSlides = () => {
           _id,
         }) => (
           <div key={_id} class="col-md-12 col-lg-4 mb-4 mb-lg-0">
-            <div class="card mt-5">
+            <div class="card ">
               <NavLink className="ripple" to={"/main/pptviewer/" + _id}>
                 <img
-                  src={url + "/static/uploads/" + heroimage}
+                  src={url + heroimage}
                   class="card-img-top"
                   alt="Laptop"
                 />
@@ -71,7 +71,7 @@ const BrowseSlides = () => {
                   <h5 class="mb-0">{title}</h5>
                   {/* <h5 class="text-dark mb-0">FREE</h5> */}
                 </div>
-                <div class="d-flex justify-content-between mb-3">
+                {/* <div class="d-flex justify-content-between mb-3">
                   <h5 class="mb-0">{plans}</h5>
                   </div>
                   <div class="d-flex justify-content-between mb-3">
@@ -84,21 +84,22 @@ const BrowseSlides = () => {
                 <div class="d-flex justify-content-between mb-2">
                   <p class="text-muted mb-0">
                     <span class="fw-bold">FREE</span>
-                  </p>
+                  </p> */}
                   <div class="ms-auto text-warning">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
-                  </div>
+                  </div><hr/>
+                  <a href="">Click For Full Detail</a>
                   
                 </div>
                 
               </div>
 
             </div>
-          </div>
+          // </div>
         )
       );
     }

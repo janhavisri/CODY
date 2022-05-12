@@ -1,11 +1,8 @@
 //import { Container } from "@material-ui/core";
 import { useEffect, useState } from "react";
 import app_config from "../../config";
-//import Update from "./update";
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import UpdateUsers from "./update";
+
 
 const ManageUser = () => {
   const url = app_config.api_url;
@@ -44,7 +41,7 @@ const ManageUser = () => {
 
   const displayUpdateForm = () => {
     if (showForm) {
-    //   return <Update formdata={formData}></Update>;
+      return <UpdateUsers formdata={formData}></UpdateUsers>;
     }
   };
 
@@ -53,7 +50,7 @@ const ManageUser = () => {
       return usersData.map(({users}) => (
         <tr>
           <td>{users.firstname}</td>
-          {/* <td>{new Date(users.created).toLocaleDateString()}</td> */}
+          <td>{new Date(users.created).toLocaleDateString()}</td>
           <td>
             <button
               onClick={(e) => deleteData(users._id)}
@@ -75,30 +72,21 @@ const ManageUser = () => {
   return (
     <div>
       <h1 className="text-center">Manage User</h1>
-      
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          
-          <Typography>Manage</Typography>
-        </AccordionSummary>
-      {/* <table className="table table-dark">
+      <hr />
+
+      <table className="table table-light  ">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Created on</th>
+            <th>First Name</th>
+            <th>Created On</th>
             <th></th>
             <th></th>
           </tr>
         </thead>
-        <tbody>{displayCourses()}</tbody>
-      </table> */}
+        <tbody>{displayUsers()}</tbody>
+      </table>
       <div className="mt-5">{displayUpdateForm()}</div>
-      </Accordion>
-    </div>
+     </div>
   );
 };
 

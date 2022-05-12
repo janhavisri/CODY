@@ -1,10 +1,13 @@
 import { Outlet } from "react-router-dom";
-// import Home from "./home";
-// import Login from "./login";
+//import Login from "./login.js";
+//import Header from "/header.js";
+import Header from "./header.js";
 const Main = () => {
   return (
     <>
+         <Header></Header> 
       <Outlet />
+
     </>
   );
 };

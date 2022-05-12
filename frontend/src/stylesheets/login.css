@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: linear-gradient(#516281, #748ba5);
+    background: linear-gradient(to right bottom, rgba(71, 71, 71, 0.678), rgba(109, 109, 109, 0.712)), url(https://static.wixstatic.com/media/0784b1_2bf53a6da06544bf83b5fc54648a2054~mv2.png/v1/fill/w_1583,h_940,al_c,q_90,enc_auto/0784b1_2bf53a6da06544bf83b5fc54648a2054~mv2.png)
 }
 
 .bg {

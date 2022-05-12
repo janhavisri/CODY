@@ -17,12 +17,10 @@ import "../../stylesheets/signup.css";
    
  
    const reviewform = {
-     fullname: "",
-     email: "",
-     heroimage:"",
+     websitename: "",
      url: "",
-     contact: "",
-     experience: "",
+     heroimage:"",
+     description: "",
      
 
    };
@@ -88,7 +86,9 @@ import "../../stylesheets/signup.css";
    return (
      
          <div>
+
          <div class="login">
+         <div class="login-box">
 	{/* <h1>Login</h1> */}
    <Formik initialValues={reviewform} onSubmit={formSubmit}>
                  {({ values, handleChange, handleSubmit }) => (
@@ -99,32 +99,13 @@ import "../../stylesheets/signup.css";
            <h1 className="add"> Add Review</h1>
            <TextField
                   className="w-100 mt-4 bg-white"
-                  label="Full Name"
+                  label="Website Name"
                   variant="filled"
-                  id="fullname"
+                  id="websitename"
                   onChange={handleChange}
-                  value={values.fullname}
+                  value={values.websitename}
                 required></TextField>
-                <TextField
-                  
-                  
-                  className="w-100 mt-4 bg-white"
-                  label="Email"
-                  variant="filled"
-                  id="email"
-                  onChange={handleChange}
-                  value={values.email}
-                required></TextField>
-               
-                
-                <input
-              
-                  onChange={uploadheroimage}
-                  type="file"
-                  className="form-control mt-4 mx-0"
-                  title="Select heroimage"
-                required/>
-                <TextField
+                                <TextField
                   className="w-100 mt-4 bg-white"
                   label="Url"
                   variant="filled"
@@ -132,21 +113,24 @@ import "../../stylesheets/signup.css";
                   onChange={handleChange}
                   value={values.url}
                ></TextField>
+               
+                <input
+              
+                  onChange={uploadheroimage}
+                  type="file"
+                  className="form-control mt-4 mx-0"
+                  title="Select heroimage"
+                required/>
+
                 <TextField
+                 multiline
+                 rows={5}
                   className="w-100 mt-4 bg-white"
-                  label="Contact"
+                  label="Description"
                   variant="filled"
-                  id="contact"
+                  id="description"
                   onChange={handleChange}
-                  value={values.contact}
-                ></TextField>
-                                <TextField
-                  className="w-100 mt-4 bg-white"
-                  label="Experience"
-                  variant="filled"
-                  id="experience"
-                  onChange={handleChange}
-                  value={values.experience}
+                  value={values.description}
                 ></TextField>
                 
              <Button
@@ -170,6 +154,8 @@ import "../../stylesheets/signup.css";
         
        </div>
        </div>
+       </div>
+
  );
  }
  export default AddReview;

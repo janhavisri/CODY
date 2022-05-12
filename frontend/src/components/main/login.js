@@ -35,7 +35,7 @@ const Login=()=>{
                      })
 
                      sessionStorage.setItem('user', JSON.stringify(data));
-                     window.location.replace('/userdashboard');
+                     window.location.replace('./userdashboard');
 
                      return
                  }
