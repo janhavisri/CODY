@@ -3,6 +3,7 @@ import app_config from "../../config";
 import Swal from 'sweetalert2';
 import { Formik } from 'formik';
 import React,{useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login=()=>{
    // const [signupOpen,setOpenSignup] =useState(false);
@@ -10,6 +11,7 @@ const Login=()=>{
 
 
  const url = app_config.api_url;
+ const navigate = useNavigate();
  
  
 
@@ -17,39 +19,43 @@ const Login=()=>{
      email: '',
      password: ''
  }
-
  const formSubmit = (values) => {
 
-     fetch(url + 'user/getbyemail/' + values.email)
-         .then(res => res.json())
-         .then(data => {
-             if (data) {
-                 console.log(data);
+    fetch(url + 'user/getbyemail/' + values.email)
+        .then(res => res.json())
+        .then(data => {
+            if (data) {
+                console.log(data);
 
-                 if (data.password == values.password) {
-                     console.log('login success');
+                if (data.password == values.password) {
+                    console.log('login success');
 
-                     Swal.fire({
-                         icon: 'success',
-                         title: 'Login Success',
-                     })
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Login Success',
+                    })
 
-                     sessionStorage.setItem('user', JSON.stringify(data));
-                     window.location.replace('./userdashboard');
+                    sessionStorage.setItem('user', JSON.stringify(data));
+                    if(data.isAdmin){
+                       navigate('/admin')
+                   }else{
+                        navigate('/user')
 
-                     return
-                 }
-             }
+                    }
 
-             Swal.fire({
-                 icon: 'error',
-                 title: 'Email or Password Incorrect'
-             })
+                    return
+                }
+            }
 
-         })
+            Swal.fire({
+                icon: 'error',
+                title: 'Email or Password Incorrect'
+            })
+
+        })
 
 
- }
+}
  
    return(
      

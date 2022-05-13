@@ -1,5 +1,5 @@
 import { Search } from "@mui/icons-material";
-import { InputAdornment, Typography } from "@mui/material";
+import { InputAdornment, Typography, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import app_config from "../../config";
@@ -92,7 +92,8 @@ const BrowseSlides = () => {
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                   </div><hr/>
-                  <a href="">Click For Full Detail</a>
+                  
+                  <Button onClick={e=>navigate("/main/platformdetail/" + _id)} variant="contained">Click For Full Details</Button>
                   
                 </div>
                 
@@ -108,16 +109,22 @@ const BrowseSlides = () => {
   const applyfilter = () => {};
 
   return (
+    <div >
+              
+     
     <div style={{ background: "#eee", height: "100vh" }}>
+      
       <header style={styles.header}>
-        <Typography className="text-center text-white" variant="h5">
+        
+        {/* <Typography className="text-center text-black" variant="h5">
           Neephur
-        </Typography>
-        <Typography className="text-center text-white" variant="h2">
-          Explore Powerpoint Slides
+        </Typography> */}
+        <Typography className="text-center text-black" variant="h2">
+          Explore Website
         </Typography>
 
         <div className="input-group mt-5">
+          
           <input
             className="form-control"
             value={filter}
@@ -131,6 +138,7 @@ const BrowseSlides = () => {
               ),
             }}
           />
+          
           <button
             className="btn btn-primary"
             onClick={applyfilter}
@@ -144,8 +152,10 @@ const BrowseSlides = () => {
         <div className="row">{displayData()}</div>
       </div>
     </div>
+    </div>
   );
 };
+
 
 const styles = {
   header: {

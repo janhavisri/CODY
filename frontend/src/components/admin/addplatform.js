@@ -1,5 +1,6 @@
 import "../../stylesheets/signup.css";
  import "../../stylesheets/addplatform.css";
+ import "../../stylesheets/signup.css"
  import * as React from 'react';
  //import Avatar from '@mui/material/Avatar';
  import Button from '@mui/material/Button';
@@ -90,13 +91,9 @@ import "../../stylesheets/signup.css";
      
          <div>
 
- <div class="container">
-   <div id="signup">
-      <div class="signup-screen">
-         <div class="space-bot text-center">
-           <div class="divider"></div>
-         </div>
-
+<div class="main-w3layouts wrapper">
+		<div class="main-agileinfo">
+			<div class="agileits-top">
    <Formik initialValues={platformform} onSubmit={formSubmit}>
                  {({ values, handleChange, handleSubmit }) => (
                    <form onSubmit={handleSubmit}>

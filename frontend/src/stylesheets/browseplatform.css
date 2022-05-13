@@ -1,8 +1,13 @@
-.card {
-    /* margin-top: -40px; */
-    background-color: beige;
-}
-
-.table {
-    margin-top: 30px;
-}
+        .card {
+            margin-top: -60px;
+            background-color: beige;
+        }
+        
+        .table {
+            margin-top: 30px;
+        }
+        /* .src {
+            margin-top: 20px;
+            height: 70%;
+            width: 100%
+        } */

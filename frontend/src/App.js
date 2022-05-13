@@ -45,7 +45,7 @@ function App() {
             <Route element={<AddReview />} path="addreview" />
             <Route element={<UserDashboard />} path="userdashboard" />
             <Route element={<BrowsePlatform/>} path="browseplatform" />
-            <Route element={<PlatformDetail/>} path="platformdetail" />
+            <Route element={<PlatformDetail/>} path="platformdetail/:id" />
 
             
 
