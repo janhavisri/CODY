@@ -65,7 +65,7 @@ const BrowseSlides = () => {
                   </p> */}
                 </div>
                 <div class="d-flex justify-content-between mb-3">
-                  <h5 class="mb-0">{description}</h5></div>
+                  <p class="mb-0">{description}</p></div>
 
                 <div class="d-flex justify-content-between mb-3">
                   <h5 class="mb-0">{title}</h5>
