@@ -136,12 +136,13 @@ img {
 /*-- end reset --*/
 
 .h {
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
-    color: #fff;
+    color: rgb(20, 80, 160);
+    margin-top: -20px;
     font-weight: 100;
     text-transform: capitalize;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -155,8 +156,9 @@ img {
 .main-agileinfo {
     width: 35%;
     margin: 1px auto;
-    background: rgba(255, 255, 255, 0.822);
+    background: rgba(247, 241, 241, 0.822);
     background-size: cover;
+    border-radius: 20px;
 }
 
 .agileits-top {

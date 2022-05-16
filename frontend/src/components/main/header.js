@@ -22,13 +22,13 @@ const Header = (props) => {
         return (
           <>
             <li className="nav-item">
-              <Link className="nav-link" to="./userdashboard">
-                UserDashboard
+              <Link className="nav-link" to="../admin/dashboard">
+                Dashboard
               </Link>
             </li>
 
   
-            <li className="nav-items">
+            <li className="nav-item">
               <button onClick={logout} className="btn btn-danger">
                 Logout
               </button>
@@ -54,9 +54,9 @@ const Header = (props) => {
       };
     return (
     
-            <nav className="navbar navbar-expand-lg bg-light">
-              <div className="container-fluid nav-link">
-                <Link className="navbar-brand" to="/main/home">
+            <nav className="navbar navbar-expand-lg bg-light n-wrapper">
+              <div className="container-fluid nav-link ">
+                <Link className="navbar-brand n-name n-left " to="/main/home">
                   Cody
                 </Link>
                 <button
@@ -70,8 +70,9 @@ const Header = (props) => {
                 >
                   <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <div className="n-right">
+                <div className="collapse navbar-collapse n-list" id="navbarSupportedContent">
+                  <ul className="navbar-nav me-auto mb-2 mb-lg-0" style={{ listStyleType: "none" }}>
                     <li className="nav-item">
                       <NavLink
                         activeClassName="active"
@@ -81,6 +82,15 @@ const Header = (props) => {
                         Browse Platform
                       </NavLink>
                     </li>
+                    <li className="nav-item">
+                      <NavLink
+                        activeClassName="active"
+                        className="nav-link"
+                        to="./browsereview"
+                      >
+                        Reviews
+                      </NavLink>
+                    </li>
                    
                      
                     {showLoggedIn()}
@@ -88,6 +98,7 @@ const Header = (props) => {
                   </ul>
                  
                 </div>
+              </div>
               </div>
             </nav>
             

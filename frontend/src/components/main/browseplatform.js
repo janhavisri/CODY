@@ -42,8 +42,8 @@ const BrowseSlides = () => {
           links,
           _id,
         }) => (
-          <div key={_id} class="col-md-12 col-lg-4 mb-4 mb-lg-0">
-            <div class="card ">
+          <div key={_id} class="col-md-12 col-lg-4 mb-4 mb-lg-0 ">
+            <div class="card cards">
               <NavLink className="ripple" to={"/main/pptviewer/" + _id}>
                 <img
                   src={url + heroimage}
@@ -64,8 +64,8 @@ const BrowseSlides = () => {
                     <s>$1099</s>
                   </p> */}
                 </div>
-                <div class="d-flex justify-content-between mb-3">
-                  <p class="mb-0">{description}</p></div>
+                {/* <div class="d-flex justify-content-between mb-1">
+                  <p class="mb-0">{description}</p></div> */}
 
                 <div class="d-flex justify-content-between mb-3">
                   <h5 class="mb-0">{title}</h5>
@@ -94,13 +94,15 @@ const BrowseSlides = () => {
                   </div><hr/>
                   
                   <Button onClick={e=>navigate("/main/platformdetail/" + _id)} variant="contained">Click For Full Details</Button>
+                  {/* <div class="b"> */}
+                  {/* <Button className="button" onClick={e=>navigate("/main/categorydetail/" + _id)} variant="contained">Click For Categories</Button> */}
                   
-                </div>
+                {/* </div> */}
                 
               </div>
 
             </div>
-          // </div>
+           </div>
         )
       );
     }
@@ -112,19 +114,21 @@ const BrowseSlides = () => {
     <div >
               
      
-    <div style={{ background: "#eee", height: "100vh" }}>
-      
+    <div style={{ background: "#eee", height: "200vh" }}>
+    <img src="https://cdn2.editmysite.com/images/landing-pages/global/home-com-forward/themes/design-xl.webp"></img>
       <header style={styles.header}>
         
         {/* <Typography className="text-center text-black" variant="h5">
           Neephur
         </Typography> */}
+        <div>
+      
         <Typography className="text-center text-black" variant="h2">
-          Explore Website
+          No Code Website List 
         </Typography>
 
         <div className="input-group mt-5">
-          
+
           <input
             className="form-control"
             value={filter}
@@ -146,6 +150,7 @@ const BrowseSlides = () => {
           >
             Search
           </button>
+        </div>
         </div>
       </header>
       <div className="container">

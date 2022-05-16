@@ -55,9 +55,11 @@ function Signup({ setOpenSignup}){
   return (
     
     <div class="main-w3layouts wrapper">
-		<h1 class="h">SignUp Form</h1>
+		{/* <h1 class="h">SignUp Form</h1> */}
 		<div class="main-agileinfo">
+      
 			<div class="agileits-top">
+      <h1 class="h">SignUp Form</h1>
       <Formik initialValues={signupform} onSubmit={formSubmit}>
                 {({ values, handleChange, handleSubmit }) => (
                   <form onSubmit={handleSubmit} >
@@ -150,3 +152,4 @@ function Signup({ setOpenSignup}){
 }
 
 export default Signup;
+

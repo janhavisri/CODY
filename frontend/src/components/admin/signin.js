@@ -21,7 +21,7 @@ const Login=()=>{
  }
  const formSubmit = (values) => {
 
-    fetch(url + 'user/getbyemail/' + values.email)
+    fetch(url + 'admin/getbyemail/' + values.email)
         .then(res => res.json())
         .then(data => {
             if (data) {
@@ -39,7 +39,7 @@ const Login=()=>{
                     if(data.isAdmin){
                        navigate('/admin')
                    }else{
-                        navigate('/user')
+                        navigate('/admin')
 
                     }
 

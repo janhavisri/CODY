@@ -1,13 +1,47 @@
-import {Outlet} from "react-router-dom"; 
-// import Home from "./home";
-//import Login from "./login";
+
+//import { Book } from "@mui/icons-material";
+import { Outlet } from "react-router-dom";
+import Sidebar from "../sidebar";
+//import Footer from "./footer";
+//import Header from "./header";
 
 const Admin = () => {
-    return (
-        <>
-            <h1></h1>
-            <Outlet/>
-        </>
-    )
+
+  const options = [
+    {
+      name : 'Signin',
+      link : '/admin/signin'
+    },
+    {
+      name : 'Add Platform',
+      link : '/admin/addPlatform'
+    },
+    {
+      name : 'Add Category',
+      link : '/admin/addCategory'
+    },
+  
+    {
+      name : 'Manage platform',
+      link : '/admin/managePlatform'
+    },
+    {
+      name : 'Manage User',
+      link : '/admin/manageUser'
+    },
+    
+  ]
+
+
+
+  return (
+    <>
+      <Sidebar sidebarOptions={options} title={'Admin Dashboard'} >
+      <Outlet />
+    </Sidebar>
+      
+    </>
+  );
 };
+
 export default Admin;

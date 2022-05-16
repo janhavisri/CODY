@@ -1,7 +1,7 @@
 //import { Container } from "@material-ui/core";
 import { useEffect, useState } from "react";
 import app_config from "../../config";
-import UpdateUsers from "./update";
+import UpdateUser from "./updateuser";
 
 
 const ManageUser = () => {
@@ -13,7 +13,7 @@ const ManageUser = () => {
   const [formData, setFormData] = useState({});
 
   const fetchData = () => {
-    fetch(url + 'users/getall')
+    fetch('users/getall')
       .then(res => res.json())
       .then(data => {
         console.log(data);
@@ -41,7 +41,7 @@ const ManageUser = () => {
 
   const displayUpdateForm = () => {
     if (showForm) {
-      return <UpdateUsers formdata={formData}></UpdateUsers>;
+      return <UpdateUser formdata={formData}></UpdateUser>;
     }
   };
 
@@ -72,9 +72,9 @@ const ManageUser = () => {
   return (
     <div>
       <h1 className="text-center">Manage User</h1>
-      <hr />
+      <hr/>
 
-      <table className="table table-light  ">
+      <table className="table table-light">
         <thead>
           <tr>
             <th>First Name</th>
