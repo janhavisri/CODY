@@ -52,9 +52,10 @@ const Login=()=>{
  }
  
    return(
-     
-<div class="login-box">
-  <h2>Login</h2>
+    <div class="login-page">
+        
+    <div class="form">
+    <h1 class="log">Login</h1>
   <Formik
                      initialValues={loginform}
                      onSubmit={formSubmit}
@@ -78,6 +79,7 @@ const Login=()=>{
 
     </Formik>
 
+</div>
 </div>
 )
 }

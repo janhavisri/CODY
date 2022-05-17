@@ -158,7 +158,7 @@ const PPTViewer = () => {
                 <h4 className="text-muted">Review</h4>
                 <hr />
                 <Rating name="simple-controlled" value={4} />
-                {/* <TextField
+                <TextField
                   label="Write Something .."
                   fullWidth
                   className="mt-2"
@@ -166,13 +166,14 @@ const PPTViewer = () => {
                   rows={3}
                   value={reviewText}
                   onChange={(e) => setReviewText(e.target.value)}
-                /> */}
-                {/* <button
+                />
+                <button
                   className="btn btn-primary mt-3 float-end"
-                  onClick={addRating}
+                  // onClick={addRating}
+                  onClick={e=>navigate("/main/browsereview/" )} 
                 >
                   Submit Review
-                </button> */}
+                </button>
               </div>
             </div>
           </div>

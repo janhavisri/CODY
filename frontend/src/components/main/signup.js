@@ -92,7 +92,7 @@ function Signup({ setOpenSignup}){
                   autoComplete="family-name"
                 />
               </Grid>
-              <Grid item xs={12} mx={6}>
+              <Grid item xs={12} >
                 <TextField
                   required
                   fullWidth
@@ -104,7 +104,7 @@ function Signup({ setOpenSignup}){
                   autoComplete="email"
                 />
               </Grid>
-              <Grid item xs={12} mx={6}>
+              <Grid item xs={12} >
                 <TextField
                   required
                   fullWidth

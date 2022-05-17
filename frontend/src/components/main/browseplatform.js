@@ -60,31 +60,14 @@ const BrowseSlides = () => {
                       {category}
                     </a>
                   </p>
-                  {/* <p class="small text-danger">
-                    <s>$1099</s>
-                  </p> */}
+
                 </div>
-                {/* <div class="d-flex justify-content-between mb-1">
-                  <p class="mb-0">{description}</p></div> */}
 
                 <div class="d-flex justify-content-between mb-3">
                   <h5 class="mb-0">{title}</h5>
                   {/* <h5 class="text-dark mb-0">FREE</h5> */}
                 </div>
-                {/* <div class="d-flex justify-content-between mb-3">
-                  <h5 class="mb-0">{plans}</h5>
-                  </div>
-                  <div class="d-flex justify-content-between mb-3">
-                  <h5 class="mb-0">{offers}</h5>
-                  </div>
-                  <div class="d-flex justify-content-between mb-3">
-                  <h5 class="mb-0">{links}</h5>
-                  </div>
 
-                <div class="d-flex justify-content-between mb-2">
-                  <p class="text-muted mb-0">
-                    <span class="fw-bold">FREE</span>
-                  </p> */}
                   <div class="ms-auto text-warning">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -94,10 +77,6 @@ const BrowseSlides = () => {
                   </div><hr/>
                   
                   <Button onClick={e=>navigate("/main/platformdetail/" + _id)} variant="contained">Click For Full Details</Button>
-                  {/* <div class="b"> */}
-                  {/* <Button className="button" onClick={e=>navigate("/main/categorydetail/" + _id)} variant="contained">Click For Categories</Button> */}
-                  
-                {/* </div> */}
                 
               </div>
 

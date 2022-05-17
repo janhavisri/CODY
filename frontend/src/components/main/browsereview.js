@@ -43,12 +43,12 @@ const BrowseSlides = () => {
               
             <div class="card cards">
               <NavLink className="ripple" to={"/main/pptviewer/" + _id}>
-                <img
+                {/* <img
                   src={url + heroimage}
                   class="card-img-top"
                   alt="Laptop"
                 />
-                
+                 */}
               </NavLink>
               
               <div class="card-body">
@@ -82,7 +82,6 @@ const BrowseSlides = () => {
                   <div class="d-flex justify-content-between mb-3">
                   <h5 class="mb-0">{links}</h5>
                   </div>
-
                 <div class="d-flex justify-content-between mb-2">
                   <p class="text-muted mb-0">
                     <span class="fw-bold">FREE</span>
@@ -131,7 +130,6 @@ const BrowseSlides = () => {
         </Typography>
 
         {/* <div className="input-group mt-5">
-
           <input
             className="form-control"
             value={filter}

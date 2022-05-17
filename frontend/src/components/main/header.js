@@ -21,11 +21,18 @@ const Header = (props) => {
       if (currentUser) {
         return (
           <>
+                      <li className="nav-item">
+              <Link className="nav-link" to="/main/addreview">
+                Add Review
+              </Link>
+            </li>
             <li className="nav-item">
               <Link className="nav-link" to="../admin/dashboard">
                 Dashboard
               </Link>
             </li>
+
+            
 
   
             <li className="nav-item">
@@ -81,7 +88,10 @@ const Header = (props) => {
                       >
                         Browse Platform
                       </NavLink>
+                      
+                    
                     </li>
+
                     <li className="nav-item">
                       <NavLink
                         activeClassName="active"
@@ -91,6 +101,7 @@ const Header = (props) => {
                         Reviews
                       </NavLink>
                     </li>
+                    
                    
                      
                     {showLoggedIn()}
