@@ -23,6 +23,6 @@ const Main = () => {
     {/* </Sidebar> */}
 {/* <Footer></Footer> */}
     </>
-  );
+  )
 };
 export default Main;
