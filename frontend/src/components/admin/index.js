@@ -2,6 +2,8 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../sidebar";
 import { AccountCircle, Dashboard } from "@mui/icons-material";
+import NavBar from "./navbar";
+
 
 const Admin = () => {
   const sidebarOptions = [
@@ -19,10 +21,12 @@ const Admin = () => {
 
   return (
     <div>
-      <h1>Admin</h1>
+      <NavBar></NavBar>
+      {/* <h1>Admin</h1> */}
       <Sidebar sidebarOptions={sidebarOptions} title="Admin Dashboard">
-        <Outlet />
+        
       </Sidebar>
+        <Outlet />
     </div>
   );
 };
