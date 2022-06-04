@@ -1,33 +1,48 @@
-import React from "react";
+
+//import { Book } from "@mui/icons-material";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../sidebar";
-import { AccountCircle, Dashboard } from "@mui/icons-material";
-import NavBar from "./navbar";
-
+import Navbar from "./navbar";
+//import Footer from "./footer";
+//import Header from "./header";
 
 const Admin = () => {
-  const sidebarOptions = [
+
+  const options = [
     {
-      name: "Manage Profile",
-      icon: <AccountCircle />,
-      link: "/admin/profile",
+      name : 'Signin',
+      link : '/admin/signin'
     },
     {
-      name: "Dashboard",
-      icon: <Dashboard />,
-      link: "/admin/dashboard",
+      name : 'Add Platform',
+      link : '/admin/addPlatform'
     },
-  ];
+    {
+      name : 'Add Category',
+      link : '/admin/addCategory'
+    },
+  
+    {
+      name : 'Manage platform',
+      link : '/admin/managePlatform'
+    },
+    {
+      name : 'Manage User',
+      link : '/admin/manageUser'
+    },
+    
+  ]
+
+
 
   return (
-    <div>
-      <NavBar></NavBar>
-      {/* <h1>Admin</h1> */}
-      <Sidebar sidebarOptions={sidebarOptions} title="Admin Dashboard">
-        
-      </Sidebar>
-        <Outlet />
-    </div>
+    <>
+    <Navbar></Navbar>
+      <Sidebar sidebarOptions={options} title={'Admin Dashboard'} >
+    </Sidebar>
+    <Outlet />
+      
+    </>
   );
 };
 

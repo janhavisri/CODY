@@ -2,7 +2,6 @@
 import Swal from "sweetalert2";
 import { Formik } from "formik";
 import app_config from "../../config";
-import {NavLink, Navigate} from "react-router-dom";
 function Signup({ setOpenSignup}){
     const url = app_config.api_url;
 
@@ -44,7 +43,6 @@ function Signup({ setOpenSignup}){
         }
       });
   };
-  
     return(
 <div class="jumbotron jumbotron-fluid">
       <div class="container">
@@ -239,16 +237,16 @@ function Signup({ setOpenSignup}){
                     <option value="2000">2004</option>
                     <option value="2000">2005</option>
                   </select>
-                  <label></label>
                 </div>
               </div>
               </div>
+              
               {/* <div class="form-item form-type-select form-item-gender"onChange={handleChange}
                   value={values.gender}>
   <label for="edit-gender" > </label>
  <select id="edit-gender" name="gender" class="form-select"><option value="" selected="selected">--Select Gender--</option><option value="male">Male</option><option value="female">Female</option><option value="other">Others</option></select>
 </div> */}
-
+<label></label>
               <button type="submit" class="btn btn-primary btn-block mb-3">
                 Create account
               </button>

@@ -11,7 +11,7 @@ const Login = () => {
   };
 
   const formSubmit = (values) => {
-    fetch(url + "adminuser/getbyemail/" + values.email)
+    fetch(url + "user/getbyemail/" + values.email)
       .then((res) => res.json())
       .then((data) => {
         if (data) {
@@ -25,8 +25,8 @@ const Login = () => {
               title: "Login Success",
             });
 
-            sessionStorage.setItem("adminuser", JSON.stringify(data));
-            window.location.replace("../admin");
+            sessionStorage.setItem("user", JSON.stringify(data));
+            window.location.replace("/admin/chart");
 
             return;
           }
@@ -72,8 +72,8 @@ const Login = () => {
                       value={values.password}
                       required
                     />
-                    <label></label>
                   </div>
+                  <label></label>
                   <button type="submit" class="btn btn-primary btn-block">
                     Login
                   </button>

@@ -1,6 +1,7 @@
 import { Container } from "@mui/material";
 import { useEffect, useState } from "react";
 import app_config from "../../config";
+import {NavLink}  from "react-router-dom";
 import UserUpdate from "./userupdate";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import EditIcon from '@mui/icons-material/Edit';
@@ -64,10 +65,10 @@ const ManageUser = () => {
             </button>
           </td>
           <td>
-            <button className="btn btn-primary" onClick={updateData}>
+           <NavLink to="/admin/profile"> <button className="btn btn-primary" onClick={updateData}>
               {/* <i class="fas fa-pen"></i> */}
               < EditIcon color="dark" />
-            </button>
+            </button></NavLink>
           </td>
         </tr>
       ));
@@ -76,33 +77,14 @@ const ManageUser = () => {
 
   return (
     <div id="table">
-<table class="table align-middle mb-0 bg-white">
-  <thead class="bg-light">
+    <table class="table align-middle mb-0 bg-white">
+  <thead class="bg-light ">
     <tr>
       <th>Name</th>
       <th>Email</th>
-      {/* <th>Status</th> */}
-      {/* <th>Position</th> */}
-      {/* <th>Actions</th> */}
+
     </tr>
   </thead>
-  
-      {/* <td>
-        <span class="badge badge-warning rounded-pill d-inline">Awaiting</span>
-      </td>
-      <td>Senior</td> */}
-      
-      <td>
-        {/* <button
-                type="button"
-                class="btn btn-link btn-rounded btn-sm fw-bold"
-                data-mdb-ripple-color="dark"
-                >
-          Edit
-        </button> */}
-      </td>
-    {/* </tr> */}
-  {/* </tbody> */}
   <tbody>{displayUser()}</tbody>
       </table>
       <div className="mt-5">{displayUpdateForm()}</div>
