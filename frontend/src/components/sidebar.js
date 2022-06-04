@@ -4,7 +4,7 @@ const Sidebar = () => {
     return (
          <div className="col-md-3 col-lg-2 sidebar-offcanvas pl-0" id="sidebar" role="navigation" style={{backgroundColor:"#f9f8f6"}}>
             <ul className="nav flex-column sticky-top pl-0 pt-6 p-4 mt-1 ">
-                <li className="nav-item mb-3 mt-3"><NavLink className="nav-link text-secondary" to="#"><h5>Jacob Nejam</h5></NavLink></li>
+                <li className="nav-item mb-3 mt-3"><NavLink className="nav-link text-secondary" to="/admin/chart"><h5>Jacob Nejam</h5></NavLink></li>
                 <li className="nav-item mb-2 "><NavLink className="nav-link text-secondary" to="/admin/profile"><i className="fas fa-user font-weight-bold"></i> <span className="ml-3">Overview</span></NavLink></li>
                 <li className="nav-item mb-2">
                     <NavLink className="nav-link text-secondary" to="/admin/manageuser" data-toggle="collapse" data-target="#submenu1"><i className="far fa-file-word font-weight-bold"></i> <span className="ml-3"> Manage User</span></NavLink>
